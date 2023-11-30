@@ -18,7 +18,8 @@ app.use(passport.initialize())
 const authRoutes = require('./routes/auth')
 
 //initialize routes
-app.use('/api', authRoutes)
+//app.use('/api', authRoutes)
+app.use(express.static(path.join(__dirname, "../client/build")))
 
 //app start
 const appStart = () => {
